@@ -15,14 +15,14 @@ public class PrioritySet
         Process currentProcess = Process.GetCurrentProcess();
         currentProcess.PriorityClass = ProcessPriorityClass.High;
         
-        // Set all Discord processes same priority, Normal in this case
+        // Set all Discord processes Normal priority
         string discordProcessName = "Discord";
         Process[] discordProccess = Process.GetProcessesByName(discordProcessName);
         foreach (Process p in discordProccess)
         {
             p.PriorityClass = ProcessPriorityClass.Normal;
         }
-        Plugin.Log.Info("Set Priorities by something");
+        Plugin.Log.Info("Set Priorities by Button");
     }
 }
 
