@@ -2,6 +2,7 @@
 using IPA.Loader;
 using IpaLogger = IPA.Logging.Logger;
 using BeatSaberMarkupLanguage.GameplaySetup;
+using PrioritySetter.UI;
 
 namespace PrioritySetter;
 
@@ -29,7 +30,7 @@ public class Plugin
     {
         GameplaySetup.Instance.AddTab(
             name: "Priority Setter",
-            resource: "PrioritySetter.prioritysetterui.bsml",
+            resource: "PrioritySetter.UI.prioritysetterui.bsml",
             host: PrioritySet);
     }
     [OnExit]

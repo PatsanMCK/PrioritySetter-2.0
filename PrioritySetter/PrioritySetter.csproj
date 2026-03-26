@@ -98,7 +98,10 @@
 
     <ItemGroup>
       <None Remove="prioritysetterui.bsml" />
-      <EmbeddedResource Include="prioritysetterui.bsml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="UI\prioritysetterui.bsml" />
     </ItemGroup>
 
 </Project>

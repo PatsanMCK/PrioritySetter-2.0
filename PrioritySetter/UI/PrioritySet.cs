@@ -2,7 +2,7 @@ using System.Collections;
 using System.Diagnostics;
 using BeatSaberMarkupLanguage.Attributes;
 
-namespace PrioritySetter;
+namespace PrioritySetter.UI;
 
 public class PrioritySet
 {
@@ -26,6 +26,7 @@ public class PrioritySet
                 discordProccess[i].PriorityClass = ProcessPriorityClass.Normal;
             }
         }
+        Plugin.Log.Notice("Set all priorities");
     }
 }
 
