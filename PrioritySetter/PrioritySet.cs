@@ -6,10 +6,10 @@ using BeatSaberMarkupLanguage.Attributes;
 
 namespace PrioritySetter;
 
-public class ButtonPrioritySet
+public class PrioritySet
 {
     [UIAction("priority-set")]
-    private void SetAllPriorities()
+    public static void SetAllPriorities()
     {
         //Set Beat Saber to High
         Process currentProcess = Process.GetCurrentProcess();

@@ -18,7 +18,7 @@ namespace PrioritySetter;
 [Plugin(RuntimeOptions.DynamicInit)]
 public class Plugin
 {
-    private static readonly ButtonPrioritySet ButtonPrioritySet = new ButtonPrioritySet();
+    private static readonly PrioritySet PrioritySet = new PrioritySet();
     internal static IpaLogger Log { get; private set; } = null!;
     // Methods with [Init] are called when the plugin is first loaded by IPA.
     // All the parameters are provided by IPA and are optional.
@@ -33,7 +33,7 @@ public class Plugin
     public void OnApplicationStart()
     {
         Log.Debug("OnApplicationStart");
-        SetAllPriorities();
+        PrioritySet.SetAllPriorities();
         Log.Notice("Priority Set on start");
         BeatSaberMarkupLanguage.Util.MainMenuAwaiter.MainMenuInitializing += OnMainMenuInitializing;
     }
@@ -42,25 +42,11 @@ public class Plugin
         GameplaySetup.Instance.AddTab(
             name: "Priority Setter",
             resource: "PrioritySetter.prioritysetterui.bsml",
-            host: ButtonPrioritySet);
+            host: PrioritySet);
     }
     [OnExit]
     public void OnApplicationQuit()
     {
         Log.Debug("OnApplicationQuit");
-    }
-    private void SetAllPriorities()
-    {
-        //Set Beat Saber to High
-        Process currentProcess = Process.GetCurrentProcess();
-        currentProcess.PriorityClass = ProcessPriorityClass.High;
-        // Set all Discord processes same priority, Normal in this case
-        string discordProcessName = "Discord";
-        Process[] discordProccess = Process.GetProcessesByName(discordProcessName);
-        foreach (Process p in discordProccess)
-        {
-            p.PriorityClass = ProcessPriorityClass.Normal;
-        }
-        Log.Info("Set Priorities by something");
     }
 }
