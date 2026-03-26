@@ -1,17 +1,7 @@
-﻿using System;
-using IPA;
+﻿using IPA;
 using IPA.Loader;
 using IpaLogger = IPA.Logging.Logger;
-using System.Diagnostics;
-using System.Collections;
-using System.Threading;
 using BeatSaberMarkupLanguage.GameplaySetup;
-using IPA.Config;
-using UnityEngine;
-using Debug = UnityEngine.Debug;
-using ModestTree;
-using SiraUtil.Zenject;
-using Timer = System.Timers.Timer;
 
 namespace PrioritySetter;
 

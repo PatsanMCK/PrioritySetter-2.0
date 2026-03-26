@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-using System.Collections;
 using System.Diagnostics;
 using BeatSaberMarkupLanguage.Attributes;
 
