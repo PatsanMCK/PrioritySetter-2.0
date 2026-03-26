@@ -9,7 +9,7 @@ public class PrioritySet
     [UIAction("priority-set")]
     public static void SetAllPriorities()
     {
-        //Set Beat Saber to High
+        //Set Beat Saber to Hig
         Process currentProcess = Process.GetCurrentProcess();
         currentProcess.PriorityClass = ProcessPriorityClass.High;
         // Set all Discord processes needed priority
