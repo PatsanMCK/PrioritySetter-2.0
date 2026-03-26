@@ -35,7 +35,7 @@ public class Plugin
         Log.Debug("OnApplicationStart");
         SetAllPriorities();
         Log.Notice("Priority Set on start");
-        
+        BeatSaberMarkupLanguage.Util.MainMenuAwaiter.MainMenuInitializing += OnMainMenuInitializing;
     }
     private static void OnMainMenuInitializing()
     {

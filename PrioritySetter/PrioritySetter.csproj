@@ -96,4 +96,9 @@
       <None Remove="obedik.bsml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="prioritysetterui.bsml" />
+      <EmbeddedResource Include="prioritysetterui.bsml" />
+    </ItemGroup>
+
 </Project>

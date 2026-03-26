@@ -8,7 +8,7 @@ namespace PrioritySetter;
 
 public class ButtonPrioritySet
 {
-    [UIAction("priority-click")]
+    [UIAction("priority-set")]
     private void SetAllPriorities()
     {
         //Set Beat Saber to High
