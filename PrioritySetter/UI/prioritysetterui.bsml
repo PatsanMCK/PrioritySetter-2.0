@@ -1,6 +1,6 @@
 <bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd'>
-    <vertical pad-top="20"> 
+    <vertical pad-top="15"> 
         <button on-click="priority-set" text="Set Priorities" pref-height="10"/>
     </vertical>
 </bg>
