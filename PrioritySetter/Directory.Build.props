@@ -4,14 +4,14 @@
 
   <!-- Plugin Metadata -->
   <PropertyGroup>
-    <PluginId>PrioritySetter</PluginId>
-    <PluginName>PrioritySetter</PluginName>
+    <PluginId>PrioritySetter-2.0</PluginId>
+    <PluginName>PrioritySetter-2.0</PluginName>
     <Authors>PatsanMCK</Authors>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <GameVersion>1.40.8</GameVersion>
     <Description>Basic PrioritySetter for Beat Saber and Discord</Description>
     <!--<PluginIcon></PluginIcon>-->
-    <!--<ProjectSource></ProjectSource>-->
+    <ProjectSource>https://github.com/PatsanMCK/PrioritySetter-2.0</ProjectSource>
     <!--<ProjectHome></ProjectHome>-->
     <!--<DonateUrl></DonateUrl>-->
   </PropertyGroup>
