@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Diagnostics;
 using BeatSaberMarkupLanguage.Attributes;
 
@@ -12,14 +13,22 @@ public class PrioritySet
         Process currentProcess = Process.GetCurrentProcess();
         currentProcess.PriorityClass = ProcessPriorityClass.High;
         
-        // Set all Discord processes Normal Priority
+        // Set all Discord processes needed priority
         string discordProcessName = "Discord";
         Process[] discordProccess = Process.GetProcessesByName(discordProcessName);
-        foreach (Process p in discordProccess)
+        for (var i = 0; i < discordProccess.Length; i++)
         {
-            p.PriorityClass = ProcessPriorityClass.Normal;
+            if (i == 4)
+            {
+                discordProccess[i].PriorityClass = ProcessPriorityClass.BelowNormal;
+                Plugin.Log.Notice("Priority set for process that corresponds to voice channels");
+            }
+            else
+            {
+                discordProccess[i].PriorityClass = ProcessPriorityClass.Normal;
+                Plugin.Log.Info("Set Priorities for other Discord processes");
+            }
         }
-        Plugin.Log.Info("Set Priorities by Button");
     }
 }
 
