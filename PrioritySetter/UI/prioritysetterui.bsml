@@ -1,6 +1,7 @@
 <bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd'>
-    <vertical pad-top="15"> 
-        <button on-click="priority-set" text="Set Priorities" pref-height="10"/>
+    <vertical>
+        <text id="prSetter2.0" text="Click on button to reset priorities!" align="Center"/>
+        <button on-click="priority-set" text="Set Priorities"/>
     </vertical>
 </bg>
